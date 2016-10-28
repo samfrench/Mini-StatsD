@@ -17,7 +17,7 @@ class StatsdListener
     @socket = UDPSocket.new
     @port = PortSanitizer.sanitize(port)
 
-    @socket.bind(nil, @port)
+    @socket.bind('0.0.0.0', @port)
   end
 
   def run
